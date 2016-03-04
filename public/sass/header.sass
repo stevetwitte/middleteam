@@ -1,0 +1,76 @@
+.main-header
+  background-color: $light-bg
+
+.slant-column
+  background-color: $dark-blue
+
+.slant-column:after, .slant-column:before
+  content: ""
+  position: absolute
+  top: 0
+  width: 0
+  height: 0
+
+.slant-column-left:after
+  right: 0
+  border-left: 100px solid $dark-blue
+  border-bottom: 75px solid $light-bg
+
+.slant-column 
+  position: relative
+  height: 75px
+  background: $dark-blue
+  &.slant-column-left
+    z-index: 1
+    float: left
+    width: 410px
+
+.site-logo
+  position: absolute
+  z-index: 100
+  bottom: -21px
+  color: $page-bg
+  text-align: right
+
+.site-logo-right
+  position: absolute
+  z-index: 100
+  top: 11px
+  color: $dark-blue
+  left: -52px
+  text-align: left
+
+.white-header
+  font-size: 5rem
+
+.main-menu
+  font-family: $header-font
+  bottom: -33px
+
+.menu-btn
+  position: absolute
+  top: 2px
+  color: black
+  background-color: $dark-blue
+  border: 0px solid black
+  border-radius: 0
+  font-size: 2rem
+  color: $page-bg
+  transition: all 250ms ease-in-out
+  &:hover
+    background-color: darken($dark-blue, 10%)
+    color: $page-bg
+  &:focus
+    background-color: darken($dark-blue, 10%) !important
+    color: $page-bg
+
+.main-menu-dropdown
+  background-color: $light-bg
+  box-shadow: none !important
+  border: none
+  border-radius: 0
+
+.dropdown-menu li a
+  color: black
+  font-family: $header-font
+  font-size: 2rem

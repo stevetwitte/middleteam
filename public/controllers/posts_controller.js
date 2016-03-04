@@ -1,7 +1,7 @@
 angular.module('controllers').controller('postsCtrl', ['$scope', '$http', '$location', 'Page', 'User', 'Post', '$uibModal',
   function($scope, $http, $location, Page, User, Post, $uibModal) {
     function init() {
-      Page.setTitle('posts');
+      Page.setTitle('POSTS');
       $scope.page = 0;
       $scope.showNext = true;
       $scope.showPrevious = false;

@@ -1,7 +1,7 @@
 angular.module('controllers').controller('hubCtrl', ['$scope', '$http', '$location', 'User', 'Page', 'Post',
   function($scope, $http, $location, User, Page, Post) {
     function init() {
-      Page.setTitle('hub');
+      Page.setTitle('HUB');
 
       User.getInfo().then(
         function(response) {

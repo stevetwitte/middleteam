@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="row text-center">
+    <h1>middleteam</h1>
+  </div>
+  <div class="line-break"></div>
+  <div class="row top-row">
+    <div class="col-md-4 center-col">  
+      <div class="login-form text-center" ng-hide="signUpform">
+        <form name="loginForm" ng-submit="login()">
+          <div class="form-group">
+            <input type="email" class="form-control" ng-model="email" ng-required="true" placeholder="email"/>
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control" ng-model="password" ng-required="true" placeholder="password"/>
+          </div>
+          <button type="submit" class="btn btn-default">login</button>
+        </form>
+        <div class="line-break"></div>
+        <button class="btn btn-default" ng-click="signUpform=true">new user? sign-up.</button>
+      </div>
+      <div class="signup-form text-center" ng-show="signUpform">
+        <form name="signUpForm" ng-submit="signUp()">
+          <div class="form-group">
+            <input type="email" class="form-control" ng-model="newemail" ng-required="true" placeholder="email"/>
+          </div>
+          <div class="form-group">
+            <input class="form-control" ng-model="newusername" ng-required="true" placeholder="username"/>
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control" ng-model="newpassword" ng-required="true" placeholder="password"/>
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control" ng-model="newpassword_conf" ng-required="true" placeholder="password confirmation"/>
+          </div>
+          <div class="form-group">
+            <input type="password" class="form-control" ng-model="secret" ng-required="true" placeholder="secret code"/>
+          </div>
+          <button type="submit" class="btn btn-default">sign-up</button>
+        </form>
+        <div class="line-break"></div>
+        <button class="btn btn-default" ng-click="signUpform=false">already a user? login.</button>
+      </div>
+    </div>
+  </div>
+</div>

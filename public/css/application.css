@@ -1,20 +1,60 @@
 body {
-  background-color: #e8edef; }
+  background-color: #BECFD0; }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Arimo", sans-serif; }
+
+p {
+  font-family: "Open Sans", sans-serif; }
+
+.mt-site-form {
+  display: block;
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.42857;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  -webkit-transition: border-color ease-in-out 0.15s, -webkit-box-shadow ease-in-out 0.15s;
+  -o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s; }
+  .mt-site-form:focus {
+    border: 1px solid #1F1F1F;
+    outline: none; }
+
+.mt-site-btn {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.5rem;
+  padding: 1px 5px;
+  color: #1F1F1F;
+  background-color: white;
+  border: 0.1px solid #BECFD0;
+  border-radius: 2px; }
+
+.mt-site-input {
+  border: none;
+  border-radius: 0;
+  box-shadow: inset 1px 1px 1px #BECFD0; }
 
 .center-col {
   float: none;
   margin: auto; }
 
+.card {
+  padding: 2rem;
+  background-color: #e8edef; }
+
 .line-break {
-  border-top: 1px #CCC solid;
-  margin: 5px 0; }
+  border-top: 1px #BECFD0 solid;
+  margin: 1rem auto; }
 
 .btn-default {
-  transition: all 250ms;
-  border: none; }
+  transition: all 250ms; }
 
 .top-row {
   margin-top: 30px; }
@@ -57,7 +97,7 @@ h1, h2, h3, h4, h5, h6 {
   position: absolute;
   z-index: 100;
   bottom: -21px;
-  color: #e8edef;
+  color: #BECFD0;
   text-align: right; }
 
 .site-logo-right {
@@ -83,14 +123,14 @@ h1, h2, h3, h4, h5, h6 {
   border: 0px solid black;
   border-radius: 0;
   font-size: 2rem;
-  color: #e8edef;
+  color: #BECFD0;
   transition: all 250ms ease-in-out; }
   .menu-btn:hover {
     background-color: #3a5a67;
-    color: #e8edef; }
+    color: #BECFD0; }
   .menu-btn:focus {
     background-color: #3a5a67 !important;
-    color: #e8edef; }
+    color: #BECFD0; }
 
 .main-menu-dropdown {
   background-color: #abc7d2;

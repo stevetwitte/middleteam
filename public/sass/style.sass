@@ -1,7 +1,11 @@
 $light-bg: #abc7d2
+$light-card-bg: #e8edef
 $dark-blue: #4d7787
-$page-bg: #e8edef
+$page-bg: #BECFD0
+$light-border: #ccc
 $header-font: 'Arimo', sans-serif
+$p-font: 'Open Sans', sans-serif
+$black: #1F1F1F
 
 body
   background-color: $page-bg
@@ -9,17 +13,57 @@ body
 h1, h2, h3, h4, h5, h6
   font-family: $header-font
 
+p
+  font-family: $p-font
+
+.mt-site-form
+  display: block
+  width: 100%
+  height: 34px
+  padding: 6px 12px
+  font-size: 14px
+  font-family: $p-font
+  line-height: 1.42857143
+  color: #555
+  background-color: #fff
+  background-image: none
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075)
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075)
+  -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s
+  -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s
+  &:focus
+    border: 1px solid $black
+    outline: none
+
+.mt-site-btn
+  font-family: $p-font
+  font-size: 1.5rem
+  padding: 1px 5px
+  color: $black
+  background-color: white
+  border: 0.1px solid $page-bg
+  border-radius: 2px
+
+.mt-site-input
+  border: none
+  border-radius: 0
+  box-shadow: inset 1px 1px 1px $page-bg
+
 .center-col
   float: none
   margin: auto
 
+.card
+  padding: 2rem
+  background-color: $light-card-bg
+
 .line-break
-  border-top: 1px #CCC solid
-  margin: 5px 0
+  border-top: 1px $page-bg solid
+  margin: 1rem auto
 
 .btn-default
   transition: all 250ms
-  border: none
 
 .top-row
   margin-top: 30px

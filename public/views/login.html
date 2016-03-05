@@ -11,8 +11,8 @@
       </div>
     </div>
   </div>
-  <div class="row top-row">
-    <div class="col-md-4 center-col card" ng-hide="signUpform">  
+  <div class="row top-row relative">
+    <div class="col-md-4 center-pos card ani-tb" ng-hide="signUpform">  
       <div class="login-form text-center">
         <form name="loginForm" ng-submit="login()">
           <div class="form-group">
@@ -27,7 +27,7 @@
         <button class="btn btn-default mt-site-btn" ng-click="signUpform=true">sign-up</button>
       </div>
     </div>
-    <div class="col-md-4 center-col card" ng-show="signUpform">
+    <div class="col-md-4 center-pos card ani-tb" ng-show="signUpform">
       <div class="signup-form text-center">
         <form name="signUpForm" ng-submit="signUp()">
           <div class="form-group">

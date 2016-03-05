@@ -2,6 +2,7 @@ angular.module('controllers').controller('loginCtrl', ['$scope', '$http', '$loca
   function($scope, $http, $location, User, Page) {
     function init() {
       Page.setTitle('LOGIN/SIGNUP');
+      $scope.signUpform=false;
 
       User.getInfo().then(
         function(response) {

@@ -1,5 +1,11 @@
 .main-header
   background-color: $light-bg
+  position: absolute
+  width: 100%
+  margin: 0
+  top: 0
+  left: 0
+  z-index: 50
 
 .slant-column
   background-color: $dark-blue
@@ -14,11 +20,11 @@
 .slant-column-left:after
   right: 0
   border-left: 100px solid $dark-blue
-  border-bottom: 75px solid $light-bg
+  border-bottom: $header-height solid $light-bg
 
 .slant-column 
   position: relative
-  height: 75px
+  height: $header-height
   background: $dark-blue
   &.slant-column-left
     z-index: 1

@@ -40,6 +40,9 @@ a
 .relative
   position: relative
 
+.page-container
+  padding: 10px
+
 .ani-tb 
   -webkit-transition: all 0.5s linear 0s
   transition: all 0.5s linear 0s
@@ -101,8 +104,19 @@ a
     margin: auto
 
 .card
-  padding: 2rem
+  padding: 0
   background-color: $light-card-bg
+
+.card-header
+  padding: 1rem
+  &.dark-blue
+    background-color: $dark-blue
+    color: $light-card-bg
+  h3
+    margin: 0
+
+.card-body
+  padding: 2rem
 
 .center-pos
   @include centerer
@@ -115,7 +129,7 @@ a
   transition: all 250ms
 
 .top-row
-  margin-top: 30px
+  margin-top: 110px
 
 .thumb 
   height: 50px

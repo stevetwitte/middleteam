@@ -5,16 +5,15 @@
     </div>
   </div>
   <div class="col-xs-7" style="width: auto;">
-    <div class="site-logo-right">
-      <h1 class="white-header">{{title}}</h1>
-    </div>
   </div>
-  <div class="btn-group main-menu" uib-dropdown>
-    <button id="btn-append-to-single-button" type="button" class="btn btn-primary menu-btn" uib-dropdown-toggle>menu <span class="caret"></span></button>
-    <ul class="dropdown-menu main-menu-dropdown" uib-dropdown-menu role="menu" aria-labelledby="btn-append-to-single-button">
-      <li role="menuitem"><a href="#hub">hub</a></li>
-      <li role="menuitem"><a href="#posts">posts</a></li>
-      <li role="menuitem"><a href="" ng-click="logout()">logout</a></li>
-    </ul>
+  <div class="site-logo-right">
+    <h1 class="white-header" style="font-size: 2rem;">
+    <span style="text-align: left; float: left; padding-left: 16px; font-size: 1.5rem; line-height: 2.3rem;">location::{{title}}</span>
+    <a href="#hub" ng-if="title=='HUB'" class="menu-active">HUB</a>
+    <a href="#hub" ng-if="title!='HUB'">HUB</a>
+    <a href="#posts"ng-if="title=='POSTS'" class="menu-active">POSTS</a>
+    <a href="#posts"ng-if="title!='POSTS'">POSTS</a>
+    <a href="" ng-click="logout()">LOGOUT</a>
+    </h1>
   </div>
 </div>

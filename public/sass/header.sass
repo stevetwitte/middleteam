@@ -1,11 +1,13 @@
 .main-header
-  background-color: $light-bg
   position: absolute
   width: 100%
   margin: 0
   top: 0
   left: 0
   z-index: 50
+  height: $header-height
+  a
+    padding: 0 5px
 
 .slant-column
   background-color: $dark-blue
@@ -20,7 +22,7 @@
 .slant-column-left:after
   right: 0
   border-left: 100px solid $dark-blue
-  border-bottom: $header-height solid $light-bg
+  border-bottom: $header-height solid $page-bg
 
 .slant-column 
   position: relative
@@ -29,38 +31,42 @@
   &.slant-column-left
     z-index: 1
     float: left
-    width: 410px
+    width: 342px
 
 .site-logo
   position: absolute
   z-index: 100
-  bottom: -21px
+  bottom: -18px
   color: $page-bg
   text-align: right
 
 .site-logo-right
-  position: absolute
   z-index: 100
-  top: 11px
   color: $dark-blue
-  left: -52px
-  text-align: left
+  font-size: 1rem
+  clear: both
+  text-align: right
+  margin-right: 20%
+  background-color: $light-card-bg
+  padding-right: 5%
+  border-top-right-radius: 5px
+  border-bottom-right-radius: 5px
 
 .white-header
-  font-size: 5rem
-
+  font-size: 4rem
+  
 .main-menu
   font-family: $header-font
   bottom: -33px
 
 .menu-btn
   position: absolute
-  top: 2px
+  top: 12px
   color: black
   background-color: $dark-blue
   border: 0px solid black
   border-radius: 0
-  font-size: 2rem
+  font-size: 1.3rem
   color: $page-bg
   transition: all 250ms ease-in-out
   &:hover
@@ -74,9 +80,15 @@
   background-color: $light-bg
   box-shadow: none !important
   border: none
+  position: absolute
+  top: 40px
   border-radius: 0
 
 .dropdown-menu li a
   color: black
   font-family: $header-font
-  font-size: 2rem
+  font-size: 1.3rem
+
+.menu-active
+  background-color: $dark-blue
+  color: $page-bg

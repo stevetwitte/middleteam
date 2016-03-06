@@ -6,7 +6,11 @@ $light-border: #ccc
 $header-font: 'Arimo', sans-serif
 $p-font: 'Open Sans', sans-serif
 $black: #1F1F1F
-$header-height: 75px
+$header-height: 45px
+$header-height-small: 35px
+
+$break-small: 320px
+$break-medium: 525px
 
 @mixin centerer
   position: absolute
@@ -21,6 +25,17 @@ h1, h2, h3, h4, h5, h6
 
 p
   font-family: $p-font
+
+a
+  color: $dark-blue
+  transition: all 200ms ease-in-out
+  &:hover
+    color: lighten($dark-blue, 10%)
+    text-decoration: none
+  &:active
+    color: lighten($dark-blue, 10%)
+  &:visited
+    color: $dark-blue
 
 .relative
   position: relative
@@ -76,6 +91,14 @@ p
 .center-col
   float: none
   margin: auto
+
+.sm
+  height: auto
+  width: 500px
+  @media screen and (max-width: $break-medium)
+    width: auto
+    min-width: 300px
+    margin: auto
 
 .card
   padding: 2rem

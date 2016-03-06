@@ -2,25 +2,33 @@
   <div id="navbar" ng-controller="headerCtrl">
       <div ng-include src="'views/_header.html'"></div>
   </div>
-  <div class="row text-center">
-    <button type="button" class="btn btn-default" ng-click="openPostCreate()">Create New Post</button>
-    <div class="page-buttons">
-      <button type="button" class="btn btn-default" ng-show="showPrevious" ng-click="previousPage()">Previous Page</button>
-      <button type="button" class="btn btn-default" ng-show="showNext" ng-click="nextPage()">Next Page</button>
-    </div>
-  </div>
-  <div ng-repeat="post in posts">
-    <div class="line-break"></div>
-    <div class="row">
-      <div class="col-sm-2">
-        <img ng-show="{{post.has_image}}" src="{{post.image_url}}" alt="Post Image" class="post-thumb">
-        <img ng-hide="{{post.has_image}}" src="images/post-image.jpg" alt="Post Image" class="post-thumb">
-      </div>
-      <div class="col-sm-10">
-        <span><h3 style="font-weight: bold; margin-bottom: 0;">{{post.title}}</h3> <h6 style="margin-top: 0;">by {{post.author}} on {{post.display_date}}</h6></span>
-        <p>{{post.body}}</p>
+  <div class="page-container">
+
+    <div class="row top-row">
+      
+      <div class="col-sm-12 card text-center">
+        <button type="button" class="btn btn-default" ng-click="openPostCreate()">Create New Post</button>
+        <div class="page-buttons">
+          <button type="button" class="btn btn-default" ng-show="showPrevious" ng-click="previousPage()">Previous Page</button>
+          <button type="button" class="btn btn-default" ng-show="showNext" ng-click="nextPage()">Next Page</button>
+        </div>
+      
+        <div ng-repeat="post in posts">
+          <div class="line-break"></div>
+          <div class="row">
+            <div class="col-sm-2">
+              <img ng-show="{{post.has_image}}" src="{{post.image_url}}" alt="Post Image" class="post-thumb">
+              <img ng-hide="{{post.has_image}}" src="images/post-image.jpg" alt="Post Image" class="post-thumb">
+            </div>
+            <div class="col-sm-10">
+              <span><h3 style="font-weight: bold; margin-bottom: 0;">{{post.title}}</h3> <h6 style="margin-top: 0;">by {{post.author}} on {{post.display_date}}</h6></span>
+              <p>{{post.body}}</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
   </div>
+  
 </div>

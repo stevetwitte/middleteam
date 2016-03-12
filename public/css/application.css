@@ -18,11 +18,29 @@ a {
   a:visited {
     color: #4d7787; }
 
+.modal-lg {
+  width: 100%;
+  margin: 0; }
+
+.modal-content {
+  border-radius: 0;
+  border: none;
+  min-height: 50vh;
+  box-shadow: none;
+  background-color: #4d7787; }
+
+.fade {
+  opacity: 1; }
+
 .relative {
   position: relative; }
 
 .page-container {
   padding: 10px; }
+
+.sra-text {
+  text-align: right;
+  margin: 30px 0 0 0; }
 
 .ani-tb {
   -webkit-transition: all 0.5s linear 0s;
@@ -61,10 +79,9 @@ a {
 .mt-site-btn {
   font-family: "Open Sans", sans-serif;
   font-size: 1.5rem;
-  padding: 1px 5px;
-  color: #1F1F1F;
-  background-color: white;
-  border: 0.1px solid #BECFD0;
+  padding: 5px 10px;
+  color: #BECFD0;
+  background-color: #4d7787;
   border-radius: 2px; }
 
 .mt-site-input {
@@ -110,7 +127,8 @@ a {
   margin: 1rem auto; }
 
 .btn-default {
-  transition: all 250ms; }
+  transition: all 250ms;
+  border: none; }
 
 .top-row {
   margin-top: 110px; }

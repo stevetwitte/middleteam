@@ -35,7 +35,8 @@ angular.module('controllers').controller('postsCtrl', ['$scope', '$http', '$loca
         animation: true,
         templateUrl: 'views/_new_post.html',
         controller: 'createPostInstanceCtrl',
-        size: 'lg'
+        size: 'lg',
+        backdrop: false
       });
 
       createPostInstance.result.then(function(newPost) {

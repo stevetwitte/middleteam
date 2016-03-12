@@ -12,8 +12,11 @@
     </div>
   </div>
   <div class="row top-row relative">
-    <div class="center-pos card sm ani-tb" ng-hide="signUpform">  
-      <div class="login-form text-center">
+    <div class="center-pos card sm ani-tb" ng-hide="signUpform">
+      <div class="card-header dark-blue">
+        <h3>login</h3>
+      </div>  
+      <div class="login-form card-body text-center">
         <form name="loginForm" ng-submit="login()">
           <div class="form-group">
             <input type="email" class="mt-site-form mt-site-input" ng-model="email" ng-required="true" placeholder="email"/>
@@ -23,12 +26,14 @@
           </div>
           <button type="submit" class="btn btn-default mt-site-btn">login</button>
         </form>
-        <div class="line-break" style="width: 20px;"></div>
-        <button class="btn btn-default mt-site-btn" ng-click="signUpform=true">sign-up</button>
+        <h6 class="sra-text">Don't have an account? <a href="" ng-click="signUpform=true">Create one here.</a></h6>
       </div>
     </div>
     <div class="center-pos card sm ani-tb" ng-show="signUpform">
-      <div class="signup-form text-center">
+      <div class="card-header dark-blue">
+        <h3>sign-up</h3>
+      </div>
+      <div class="signup-form card-body text-center">
         <form name="signUpForm" ng-submit="signUp()">
           <div class="form-group">
             <input type="email" class="mt-site-form mt-site-input" ng-model="newemail" ng-required="true" placeholder="email"/>
@@ -47,8 +52,7 @@
           </div>
           <button type="submit" class="btn btn-default mt-site-btn">sign-up</button>
         </form>
-        <div class="line-break" style="width: 20px;"></div>
-        <button class="btn btn-default mt-site-btn" ng-click="signUpform=false">login</button>
+        <h6 class="sra-text">Already a user? <a href="" ng-click="signUpform=false">Login here.</a></h6>
       </div>
     </div>
   </div>

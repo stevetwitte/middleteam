@@ -65,6 +65,7 @@ angular.module('controllers').controller('postsCtrl', ['$scope', '$http', '$loca
   function($scope, $uibModalInstance, $timeout, User, Upload, Post) {
 
     $scope.createPost = function(file) {
+      $scope.submitDisabled = true;
       Post.createPost($scope.title, $scope.body, file).then(function(response) {   
         if (response.status === 200) {
           $uibModalInstance.close(response.data);

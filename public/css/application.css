@@ -29,6 +29,20 @@ a {
   box-shadow: none;
   background-color: #4d7787; }
 
+.modal-header {
+  background-color: #abc7d2;
+  color: #4d7787;
+  border: none; }
+
+.modal-footer {
+  background-color: #4d7787;
+  color: #abc7d2;
+  border: none; }
+
+.modal-title-big {
+  padding: 0;
+  margin: 0; }
+
 .fade {
   opacity: 1; }
 
@@ -84,10 +98,24 @@ a {
   background-color: #4d7787;
   border-radius: 2px; }
 
+.mt-site-btn-light {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1.5rem;
+  padding: 5px 10px;
+  color: #4d7787;
+  background-color: #BECFD0;
+  border-radius: 2px; }
+
 .mt-site-input {
   border: none;
   border-radius: 0;
   box-shadow: inset 1px 1px 1px #BECFD0; }
+
+.mt-site-file {
+  width: auto;
+  background-color: transparent;
+  box-shadow: none;
+  color: #BECFD0; }
 
 .center-col {
   float: none;
@@ -134,11 +162,16 @@ a {
   margin-top: 110px; }
 
 .thumb {
-  height: 50px; }
+  width: auto;
+  margin: auto;
+  display: block; }
 
 .post-thumb {
   width: 100%;
   max-height: 200px; }
+
+.post-form {
+  padding: 2% 5%; }
 
 .main-header {
   position: absolute;

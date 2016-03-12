@@ -53,7 +53,24 @@ a {
   position: relative; }
 
 .page-container {
-  padding: 10px; }
+  padding: 10px;
+  overflow-x: hidden; }
+
+.left-bar {
+  background-color: #4d7787;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 80px;
+  height: 10000px;
+  overflow: hidden;
+  padding-top: 100px; }
+
+.sidebar-icon {
+  margin: 0;
+  font-size: 7rem;
+  text-align: center;
+  color: #BECFD0; }
 
 .center-label {
   margin: 5px auto 5px 40%; }

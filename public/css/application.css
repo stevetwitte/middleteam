@@ -244,14 +244,15 @@ a {
   text-align: right; }
 
 .site-logo-right {
+  overflow: hidden;
   z-index: 100;
   color: #4d7787;
   font-size: 1rem;
   clear: both;
   text-align: right;
   background-color: #e8edef;
-  padding-right: 10%;
-  height: 24px;
+  padding: 0 10% 0 0;
+  height: 22px;
   border-bottom: 1px solid; }
 
 .white-header {

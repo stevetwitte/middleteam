@@ -61,16 +61,20 @@ a {
   position: fixed;
   left: 0;
   top: 0;
-  width: 80px;
+  width: 55px;
   height: 10000px;
   overflow: hidden;
   padding-top: 100px; }
 
 .sidebar-icon {
   margin: 0;
-  font-size: 7rem;
+  font-size: 4rem;
   text-align: center;
-  color: #BECFD0; }
+  color: #BECFD0;
+  transition: all 200ms ease-in-out; }
+  .sidebar-icon:hover {
+    cursor: pointer;
+    color: #a0b9bb; }
 
 .center-label {
   margin: 5px auto 5px 40%; }
@@ -197,7 +201,7 @@ a {
   padding: 2% 5% 0 5%; }
 
 .main-header {
-  position: absolute;
+  position: fixed;
   background-color: #BECFD0;
   width: 100%;
   margin: 0;
@@ -245,11 +249,10 @@ a {
   font-size: 1rem;
   clear: both;
   text-align: right;
-  margin-right: 20%;
   background-color: #e8edef;
-  padding-right: 5%;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px; }
+  padding-right: 10%;
+  height: 24px;
+  border-bottom: 1px solid; }
 
 .white-header {
   font-size: 4rem; }

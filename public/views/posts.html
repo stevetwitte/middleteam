@@ -11,17 +11,19 @@
         <h1 class="sidebar-icon" ng-show="showNext" ng-click="nextPage()"><i class="fa fa-arrow-circle-right"></i></h1>
         <h1 class="sidebar-icon" ng-show="showPrevious" ng-click="previousPage()"><i class="fa fa-arrow-circle-left"></i></h1>
       </div>
-      
-      <div class="col-xs-11 col-sm-offset-1 card text-center">
+
+      <div class="col-xs-11 col-lg-10 col-sm-offset-1 card">
         <div ng-repeat="post in posts">
-          <div class="line-break"></div>
-          <div class="row">
-            <div class="col-sm-2">
-              <img ng-show="{{post.has_image}}" src="{{post.image_url}}" alt="Post Image" class="post-thumb">
-              <img ng-hide="{{post.has_image}}" src="images/post-image.jpg" alt="Post Image" class="post-thumb">
+          <div ng-hide="$first" class="line-break"></div>
+          <div class="row nested">
+              <span><h3 style="font-weight: bold; margin-bottom: 0;">{{post.title}}</h3> <h6 style="margin-top: 0;">by {{post.author}} on {{post.display_date}}</h6></span>
+          </div>
+          <div class="row nested">
+            <div ng-hide="post.image_url == nill" class="col-sm-2 post-img-preview" style="background-image: url({{post.image_url}});">
+            </div>
+            <div ng-show="post.image_url == nill" class="col-sm-2 post-img-preview">
             </div>
             <div class="col-sm-10">
-              <span><h3 style="font-weight: bold; margin-bottom: 0;">{{post.title}}</h3> <h6 style="margin-top: 0;">by {{post.author}} on {{post.display_date}}</h6></span>
               <p>{{post.body}}</p>
             </div>
           </div>
@@ -30,5 +32,5 @@
     </div>
 
   </div>
-  
+
 </div>

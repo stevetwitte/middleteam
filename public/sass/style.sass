@@ -89,10 +89,29 @@ a
   overflow: hidden
   padding-top: 100px
 
+.top-bar
+  background-color: $dark-blue
+  position: fixed
+  left: 0
+  top: $header-height + 20px
+  width: 100000px
+  height: 38px
+  overflow: hidden
+  padding-left: 10px
+
 .sidebar-icon
   margin: 0
   font-size: 4rem
   text-align: center
+  color: $page-bg
+  transition: all 200ms ease-in-out
+  &:hover
+    cursor: pointer
+    color: darken($page-bg, 10%)
+
+.sidebar-icon-sm
+  margin: 5px 10px
+  font-size: 3rem
   color: $page-bg
   transition: all 200ms ease-in-out
   &:hover
@@ -213,15 +232,3 @@ a
   margin: auto
   display: block
   max-height: 400px
-
-.post-thumb
-  max-height: 200px
-  width: 100%
-
-.post-form
-  padding: 2% 5% 0 5%
-
-.post-img-preview
-  height: 150px
-  background-size: cover
-  background-repeat: no-repeat

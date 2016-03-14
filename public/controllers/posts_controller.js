@@ -66,10 +66,13 @@ angular.module('controllers').controller('postsCtrl', ['$scope', '$http', '$loca
 
     $scope.createPost = function(file) {
       $scope.submitDisabled = true;
-      Post.createPost($scope.title, $scope.body, file).then(function(response) {   
+      spinner.spin(document.body);
+      Post.createPost($scope.title, $scope.body, file).then(function(response) {
         if (response.status === 200) {
+          spinner.stop();
           $uibModalInstance.close(response.data);
         } else {
+          spinner.stop();
           console.log(httpError.status + ": " + httpError.statusText);
         }
       });

@@ -6,12 +6,12 @@ module Api
         offset = post_params[:page].to_i * 10
         posts = Post.all.order(created_at: :desc).offset(offset).limit(10)
 
-        render status: :ok, json: posts, each_serializer: PostSerializer
+        render status: :ok, json: posts, each_serializer: PostSummarySerializer
       rescue StandardError => e
         logger.error(e.message)
         render status: :internal_server_error, json: { error: 'Internal Error' }
         return
-      end 
+      end
     end
 
     def create
@@ -35,7 +35,7 @@ module Api
     end
 
     private
-    
+
     def post_params
       params.permit(:title, :body, :image, :page, :file)
     end

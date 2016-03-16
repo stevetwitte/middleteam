@@ -35,7 +35,8 @@ angular.module('controllers').controller('postsCtrl', ['$scope', '$http', '$loca
         animation: true,
         templateUrl: 'views/_new_post.html',
         controller: 'createPostInstanceCtrl',
-        size: 'lg'
+        size: 'lg',
+        backdrop: false
       });
 
       createPostInstance.result.then(function(newPost) {
@@ -58,16 +59,24 @@ angular.module('controllers').controller('postsCtrl', ['$scope', '$http', '$loca
       getPosts($scope.page);
     };
 
+    $scope.openPostDetails = function(post) {
+      $location.url('/post/:123');
+    };
+
     init();
   }
 ]).controller('createPostInstanceCtrl', ['$scope', '$uibModalInstance', '$timeout', 'User', 'Upload', 'Post',
   function($scope, $uibModalInstance, $timeout, User, Upload, Post) {
 
     $scope.createPost = function(file) {
-      Post.createPost($scope.title, $scope.body, file).then(function(response) {   
+      $scope.submitDisabled = true;
+      spinner.spin(document.body);
+      Post.createPost($scope.title, $scope.body, file).then(function(response) {
         if (response.status === 200) {
+          spinner.stop();
           $uibModalInstance.close(response.data);
         } else {
+          spinner.stop();
           console.log(httpError.status + ": " + httpError.statusText);
         }
       });

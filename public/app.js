@@ -23,6 +23,10 @@ angular.module('lhkapp', [
           templateUrl: 'views/posts.html',
           controller: 'postsCtrl'
         })
+        .when('/post/:id', {
+          templateUrl: 'views/post_details.html',
+          controller: 'postDetailsCtrl'
+        })
         .otherwise({
           redirectTo: '/'
         });

@@ -59,6 +59,10 @@ angular.module('controllers').controller('postsCtrl', ['$scope', '$http', '$loca
       getPosts($scope.page);
     };
 
+    $scope.openPostDetails = function(post) {
+      $location.url('/post/:123');
+    };
+
     init();
   }
 ]).controller('createPostInstanceCtrl', ['$scope', '$uibModalInstance', '$timeout', 'User', 'Upload', 'Post',

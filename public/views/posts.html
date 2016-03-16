@@ -16,12 +16,12 @@
         <i ng-click="openPostCreate()" class="fa fa-plus-square sidebar-icon-sm"></i><i ng-show="showNext" ng-click="nextPage()" class="fa fa-arrow-circle-right sidebar-icon-sm"></i><i ng-show="showPrevious" ng-click="previousPage()" class="fa fa-arrow-circle-left sidebar-icon-sm"></i></h1>
       </div>
 
-      <div class="col-xs-12 col-sm-11 col-lg-10 col-sm-offset-1 card">
+      <div class="col-xs-12 col-sm-11 col-lg-10 col-sm-offset-1 card slide-right">
         <div class="card-header dark-blue">
           <h4>posts : by date</h4>
         </div>
 
-        <div ng-repeat="post in posts" class="post-preview">
+        <div ng-repeat="post in posts" ng-click="openPostDetails(post)" class="post-preview">
           <div class="row nested posts-header">
               <div class="col-xs-8" style="padding-left: 0;">
                 <h3 class="post-title-sm">{{post.title}}</h3>

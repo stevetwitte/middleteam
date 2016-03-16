@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>middleteam</title>
+        <meta name="description" content="If you don't know...">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!-- Place favicon.ico in the root directory -->
+        <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
+        <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Arimo:400,400italic,700,700italic'>
+        <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic'>
+        <link rel="stylesheet" href="css/application.css">
+
+    </head>
+    <body ng-app="lhkapp">
+        <!--[if lt IE 10]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+        <div ng-view></div>
+
+        <script src="bower_components/angular/angular.min.js"></script>
+        <script src="bower_components/angular-route/angular-route.min.js"></script>
+        <script src="bower_components/angular-aria/angular-aria.min.js"></script>
+        <script src="bower_components/angular-animate/angular-animate.min.js"></script>
+        <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+        <script src="bower_components/ng-file-upload/ng-file-upload.min.js"></script>
+        <script src="bower_components/spin.js/spin.min.js"></script>
+
+        <script src="app.js"></script>
+        <script src="models/user.js"></script>
+        <script src="models/post.js"></script>
+        <script src="services/page.js"></script>
+        <script src="controllers/header_controller.js"></script>
+        <script src="controllers/login_controller.js"></script>
+        <script src="controllers/hub_controller.js"></script>
+        <script src="controllers/posts_controller.js"></script>
+        <script src="controllers/post_details_controller.js"></script>
+
+    </body>
+</html>

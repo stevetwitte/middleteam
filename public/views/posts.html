@@ -1,0 +1,51 @@
+<div class="container-fluid">
+  <div id="navbar" ng-controller="headerCtrl">
+      <div ng-include src="'views/_header.html'"></div>
+  </div>
+  <div class="page-container">
+
+    <div class="row top-row">
+
+      <div class="hidden-xs left-bar">
+        <h1 class="sidebar-icon" ng-click="openPostCreate()"><i class="fa fa-plus-square"></i></h1>
+        <h1 class="sidebar-icon" ng-show="showNext" ng-click="nextPage()"><i class="fa fa-arrow-circle-right"></i></h1>
+        <h1 class="sidebar-icon" ng-show="showPrevious" ng-click="previousPage()"><i class="fa fa-arrow-circle-left"></i></h1>
+      </div>
+
+      <div class="hidden-sm hidden-md hidden-lg top-bar">
+        <i ng-click="openPostCreate()" class="fa fa-plus-square sidebar-icon-sm"></i><i ng-show="showNext" ng-click="nextPage()" class="fa fa-arrow-circle-right sidebar-icon-sm"></i><i ng-show="showPrevious" ng-click="previousPage()" class="fa fa-arrow-circle-left sidebar-icon-sm"></i></h1>
+      </div>
+
+      <div class="col-xs-12 col-sm-11 col-lg-10 col-sm-offset-1 card slide-right">
+        <div class="card-header dark-blue">
+          <h4>posts : by date</h4>
+        </div>
+
+        <div ng-repeat="post in posts" ng-click="openPostDetails(post)" class="post-preview">
+          <div class="row nested posts-header">
+              <div class="col-xs-8" style="padding-left: 0;">
+                <h3 class="post-title-sm">{{post.title}}</h3>
+              </div>
+              <div class="col-xs-4">
+                <h6 class="by-line-sm">by {{post.author}} on {{post.display_date}}</h6>
+              </div>
+          </div>
+          <div class="row nested">
+            <div ng-hide="post.image_url == nill" class="col-xs-2 col-sm-1 post-img-preview" style="background-image: url({{post.image_url}});">
+            </div>
+            <div ng-show="post.image_url == nill" class="col-xs-2 col-sm-1 post-img-preview">
+            </div>
+            <div class="col-xs-10 col-sm-11">
+              <p>{{post.body}}</p>
+            </div>
+          </div>
+          <div class="row nested">
+          <div class="line-break" style="margin: 10px -15px 0;"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>

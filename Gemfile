@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 gem 'dotenv-rails', :groups => [:development, :test]
-gem 'rails', '4.2.5.1'
+gem 'rails', '4.2.6'
 gem 'rails-api'
 gem 'active_model_serializers'
 gem 'pg', '~> 0.15'

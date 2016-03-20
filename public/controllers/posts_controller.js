@@ -60,7 +60,7 @@ angular.module('controllers').controller('postsCtrl', ['$scope', '$http', '$loca
     };
 
     $scope.openPostDetails = function(post) {
-      $location.url('/post/:123');
+      $location.url('/post/' + post.id);
     };
 
     init();

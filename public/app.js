@@ -33,7 +33,7 @@ angular.module('lhkapp', [
     }
   ]);
 
-var opts = {
+var spinnerOptions = {
   lines: 5, // The number of lines to draw
   length: 28, // The length of each line
   width: 14, // The line thickness
@@ -56,4 +56,4 @@ var opts = {
   position: 'absolute' // Element positioning
 };
 
-var spinner = new Spinner(opts);
+var spinner = new Spinner(spinnerOptions);

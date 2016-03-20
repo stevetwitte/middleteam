@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     get 'user', to: 'users#info'
 
     post 'post', to: 'posts#create'
+    get 'post/:id', to: 'posts#show'
     get 'posts', to: 'posts#index'
   end
 end

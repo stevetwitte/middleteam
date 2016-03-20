@@ -1,0 +1,31 @@
+<div class="container-fluid">
+  <div id="navbar" ng-controller="headerCtrl">
+      <div ng-include src="'views/_header.html'"></div>
+  </div>
+  <div class="page-container">
+
+    <div class="row top-row">
+
+      <div class="hidden-xs left-bar">
+      </div>
+
+      <div class="hidden-sm hidden-md hidden-lg top-bar">
+        <i ng-click="openPostCreate()" class="fa fa-plus-square sidebar-icon-sm"></i><i ng-show="showNext" ng-click="nextPage()" class="fa fa-arrow-circle-right sidebar-icon-sm"></i><i ng-show="showPrevious" ng-click="previousPage()" class="fa fa-arrow-circle-left sidebar-icon-sm"></i></h1>
+      </div>
+
+      <div class="col-xs-12 col-sm-11 col-lg-10 col-sm-offset-1 card slide-right">
+        <div class="card-header dark-blue">
+          <h4>{{post.title}} : {{post.display_date}} : {{post.author}}</h4>
+        </div>
+        <div class="card-body">
+          <img class="post-img-big-right" ng-hide="post.image_url == nill" src="{{post.image_url}}">
+          <p>{{post.body}}</p>
+        </div>
+
+
+      </div>
+    </div>
+
+  </div>
+
+</div>

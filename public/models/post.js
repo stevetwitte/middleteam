@@ -19,6 +19,22 @@ angular.module('models').service('Post', function($location, $http, User, Upload
       return Upload.upload(request);
     },
 
+    getPost: function(id) {
+      if (id === undefined) {
+        return false;
+      }
+
+      var request = {
+        method: 'GET',
+        url: 'api/post/' + id,
+        headers: {
+          'token': User.getToken()
+        }
+      };
+
+      return $http(request);
+    },
+
     getPosts: function(page) {
       if (page === undefined) {
         page = 0;
